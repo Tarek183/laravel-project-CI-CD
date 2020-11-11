@@ -1,12 +1,7 @@
 pipeline {
  agent {
-<<<<<<< HEAD
         label "master"
     }
-=======
-      label "tarek"
- }
->>>>>>> b8bc08232da109c1847202b8906bf86342070817
  stages {
         stage("Build") {
             steps {
@@ -22,13 +17,10 @@ pipeline {
                 bat 'php artisan test'
             }
         }
-<<<<<<< HEAD
-=======
         stage("Code coverage") {
             steps {
                 bat "vendor/bin/phpunit --coverage-html 'reports/coverage'"
             }
         }
->>>>>>> b8bc08232da109c1847202b8906bf86342070817
   }
 }
