@@ -20,5 +20,14 @@ pipeline {
                 bat "vendor/bin/phpunit --coverage-html 'reports/coverage'"
             }
         }
+       	stage("Sonar metrics") {
+            steps {
+                script {
+                    // this step enable to execute the SonarQube analysis
+                    bat "mvn sonar:sonar "
+                     }
+                }
+            } 
+
   }
 }
